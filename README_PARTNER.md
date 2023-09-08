@@ -8,7 +8,7 @@
     ...> git lfs version
     ```
 
-2. Checkout the partner branch of this repository.
+2. Clone this repository and checkout the `partner` branch.
 
     ```
     ...> git clone --branch partner https://github.com/ValveSoftware/GameNetworkingSockets.git
@@ -16,7 +16,7 @@
 
 3. Initialize some git submodules.
 
-    The "partner" module is always required, and contains some things that
+    The `partner` module is always required, and contains some things that
     are required for all use cases involving SDR or console, and are either non-public
     or are large and were not included in the partner branch to avoid bloat.
 
@@ -43,8 +43,8 @@
 
     In this command line:
     - `/ps5` selects the target platform.
-    - `@steamnetworkingsockets` says 'build the steamnetworkingsockets project (the client library) and any dependent projects'.  Currently the only dependent project is a "messages" project that runs the protobuf compiler.  This is a separate project for historical reasons and due to how all of this fit into the larger Steaqm codebase.
-    - `/mksln steamnetworkingsockets_ps5.sln`
+    - `@steamnetworkingsockets` says 'build the steamnetworkingsockets project (the client library) and any dependent projects'.  Currently the only dependent project is a "messages" project that runs the protobuf compiler.  This is a separate project for historical reasons and due to how all of this fits into the larger Steaqm codebase.
+    - `/mksln steamnetworkingsockets_ps5.sln` - generate a solution with the given filename.
 
     VPC will locate the platform toolchain from the appropriate environment variables.
 
