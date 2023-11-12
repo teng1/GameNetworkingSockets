@@ -98,6 +98,12 @@ jobs:
 
       - uses: lukka/get-cmake@latest
 
+      - name: Restore artifacts, setup vcpkg
+        uses: lukka/run-vcpkg@v10
+        with:
+          vcpkgJsonGlob: vcpkg.json
+          runVcpkgInstall: false
+
       - name: Install dependencies and generate project files
         run: |
           mkdir build
