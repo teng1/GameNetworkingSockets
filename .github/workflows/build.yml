@@ -88,3 +88,14 @@ jobs:
         run: test_connection.exe identity quick lane_quick_queueanddrain lane_quick_priority_and_background
         shell: cmd
 
+  build-and-test-macos:
+    #if: false  # Temporarily disable
+    name: Build And Test MacOS
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@main
+      - name: test step
+        run: |
+          ls -altr
+  
